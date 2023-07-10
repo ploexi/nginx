@@ -1,1 +1,1 @@
-# gitops-hada
+# gitops-ploexi
