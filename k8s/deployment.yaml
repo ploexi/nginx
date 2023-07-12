@@ -1,23 +1,23 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
-  name: httpd
+  name: nginx
 spec:
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      app: httpd
-  replicas: 6 # tells deployment to run 1 pods matching the template
+      app: nginx
+  replicas: 8 # tells deployment to run 1 pods matching the template
   template: # create pods using pod definition in this template
     metadata:
       labels:
-        app: httpd
+        app: nginx
     spec:
       containers:
-      - name: httpd
+      - name: nginx
         #image: nginx
-        image: httpd:latest
+        image: nginx:latest
         resources:
           limits:
             memory: "128Mi"
