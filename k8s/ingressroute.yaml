@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - http
   routes:
-  - match: nginx.k3s.fepox.com
+  - match: Host(`<hallo.k3s.fepox.com>`)
     kind: Rule
     services:
     - name: nginx
