@@ -1,0 +1,13 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: nginx
+spec:
+  entryPoints:
+    - http
+  routes:
+  - match: nginx.k3s.fepox.com
+    kind: Rule
+    services:
+    - name: nginx
+      port: 8888
